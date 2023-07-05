@@ -1,0 +1,17 @@
+.b{
+    margin:5px;
+    margin-left: 4px;
+}
+.b:hover {
+    background-color: #fff; 
+    color: green;
+    border:solid 1px #4CAF50;
+  }
+  .fa-capsules{
+    color: #4CAF50;
+    margin-right: 5px;
+  }
+  h4{
+    color:#4CAF50;
+    margin-top: 9px;
+  }

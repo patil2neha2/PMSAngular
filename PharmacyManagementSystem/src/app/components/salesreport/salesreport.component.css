@@ -1,0 +1,22 @@
+.container{
+    margin-top: 100px;
+    height: 630px;
+    background-color: rgb(179, 217, 179);
+}
+h3{
+    text-align: center;
+    color: #4287f5;
+    margin-bottom: 25px;
+   
+}
+#table{
+    width: 595px;
+    height: 842px;
+}
+.download-button{
+    margin-bottom: 15px;
+}
+.g{
+    color: white;
+    margin-left: 230px;
+}

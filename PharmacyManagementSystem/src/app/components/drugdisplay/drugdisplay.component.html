@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="container-fluid c">
+<div class="container m">
+  <button class="btn btn-primary top-0 end-0 m-3" (click)="goToCart()">
+    Go To Cart  <i class="fa fa-shopping-cart"></i>
+  </button>
+</div>
+
+<div class="product-container">
+  <div class="product-card" *ngFor="let p of Service.listdrug">
+    <h3 class="product-name">Name: {{p.drugName}}</h3>
+    <p class="product-quantity">Quantity: {{p.quantity}}</p>
+    <p class="product-price">Price: {{p.price}}</p>
+    <button class="add-button" (click)="addToCart(p)">Add to Cart <i class="fa fa-shopping-cart"></i></button>
+  </div>
+</div>
+</div>

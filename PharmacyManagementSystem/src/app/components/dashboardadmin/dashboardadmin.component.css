@@ -1,0 +1,35 @@
+.card {
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgb(131, 221, 131);
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+  width: 250;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.card-text {
+  margin-top: 10px;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+h5.card-title {
+  color: black;
+}
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(131, 221, 131);
+}

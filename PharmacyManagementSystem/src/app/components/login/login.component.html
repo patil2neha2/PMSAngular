@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="outer">
+    <div class="container ">
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center vh-100 ">
+                <div class="panel border text-center ">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold h">LOGIN</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" >
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="email" type="email" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.get('email')?.touched && loginForm.hasError('required','email')" class="text-danger s">Email is required</small>
+                             <small *ngIf="loginForm.get('email')?.touched && loginForm.hasError('email','email')" class="text-danger s">Invalid email address</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" >
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="password" type="password" placeholder="Your Password">
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.get('password')?.touched && loginForm.hasError('required','password')" class="text-danger s">Password is required </small>
+                            <span *ngIf="password?.errors?.['pattern']">Password must be at least 8 characters long and <br>contain at least one letter and one number.</span>
+                       
+                            <div class="form-inline fr mt-4">
+                                <a id="forget" class="font-weight-bold ">Forget Password?</a>
+                            </div>
+                            <button (click)="onLogin()"  type="submit" class="btn btn-success btn-block mt-4 w-100">Login</button>
+                            <div class="text-center pt-4 text-muted ">Don't have account? <a id="forget"
+                                    routerLink="/signup">Sign Up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>    
+    </div>
+</div>    

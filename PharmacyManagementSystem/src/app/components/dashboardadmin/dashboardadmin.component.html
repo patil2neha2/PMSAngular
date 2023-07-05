@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="container">
+  <h2>REGISTERED USERS</h2>
+  <div class="row">
+    <div class="col-md-3 mb-4" *ngFor="let p of users">
+      <div class="card h-100">
+        <img src="assets/images/userss.jpg" class="card-img-top" alt="User Profile Picture">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text">
+            <strong>Email:</strong> {{ p.email }}<br>
+            <strong>Contact:</strong> {{ p.contact }}<br>
+            <strong>Role:</strong> {{ p.role }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

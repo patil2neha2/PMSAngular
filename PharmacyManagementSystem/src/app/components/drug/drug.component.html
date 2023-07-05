@@ -1,0 +1,41 @@
+
+<app-header></app-header>
+ <app-drugform></app-drugform> 
+<div class="container">
+
+</div>
+<div class="container top">
+
+  <h2 class="text-center font-weight-bold">DRUG DETAILS</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DrugId</th>
+        <th>Drug Name</th>
+        <th>Supplier Id</th>
+        <th>Quantity</th>
+        <th>Expiry Date</th>
+        <th>Price</th>
+        <th>Actions</th>
+        
+       
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let p of listdrug">
+      <td>{{ p.drugId}}</td>
+      <td>{{ p.drugName}}</td>
+      <td>{{p.supplier.supplierId}}</td>
+      <td>{{ p.quantity}}</td>
+      <td>{{p.expiryDate | date}}</td>
+      <td>{{ p.price }}</td>
+      <td>
+          
+        <button class="btn btn-primary btn-sm b"(click)="populateDrug(p)" >Edit</button>
+          <button class="btn btn-danger btn-sm b" (click)="delete(p.drugId)">Delete</button>
+        
+      </td>
+     </tr>
+    </tbody>
+  </table>
+</div>

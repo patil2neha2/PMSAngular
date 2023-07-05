@@ -1,0 +1,42 @@
+.bgimg{
+    max-height: 600px;
+
+}
+.h{
+    margin-top: 130px;
+}
+
+.d-flex {
+    display: flex;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+  
+  .ml-4 {
+    margin-left: 1rem;
+  }
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  .b{
+    margin:5px;
+}
+.b:hover {
+    background-color: #fff; 
+    color: green;
+    border:solid 1px #4CAF50;
+  }

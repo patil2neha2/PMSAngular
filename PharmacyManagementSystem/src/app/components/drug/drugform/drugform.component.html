@@ -1,0 +1,67 @@
+<input #checkbox1 type="checkbox" name="toggle" id="toggle">
+<label for="toggle"></label>
+<div class="container">
+</div>
+<div class="formAdd">
+  <form autocomplete="off" #myForm="ngForm" (ngSubmit)="myForm.form.valid && submit(myForm)">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <input type="hidden" name="id" [value]="service.drugData.drugId">
+
+          <label for="name" class="float-left">Name</label>
+          <div *ngIf="name.invalid && (name.touched || name.dirty)" class="float-right">
+            <p class="text-danger">Required</p>
+          </div>
+          <input type="text" name="name" class="form-control" placeholder="Enter Name" #name="ngModel" [(ngModel)]="service.drugData.drugName" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="quantity" class="float-left">Quantity</label>
+          <div *ngIf="quantity.invalid && (quantity.touched || quantity.dirty)" class="float-right">
+            <p class="text-danger">Required</p>
+          </div>
+          <input type="number" name="quantity" class="form-control" placeholder="Enter Quantity" #quantity="ngModel" [(ngModel)]="service.drugData.quantity" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="price" class="float-left">Price</label>
+          <div *ngIf="price.invalid && (price.touched || price.dirty)" class="float-right">
+            <p class="text-danger">Required</p>
+          </div>
+          <input type="number" name="price" class="form-control" placeholder="Enter Price" #price="ngModel" [(ngModel)]="service.drugData.price" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="expiryDate" class="float-left">Expiry Date</label>
+          <div *ngIf="expiryDate.invalid && (expiryDate.touched || expiryDate.dirty)" class="float-right">
+            <p class="text-danger">Required</p>
+          </div>
+          <input type="date" name="expiryDate" class="form-control u" placeholder="Enter Expiry Date" #expiryDate="ngModel" [(ngModel)]="service.drugData.expiryDate" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="supplierId" class="float-left">Supplier ID</label>
+          
+           <input type="text" name="s" class="form-control" placeholder="Enter Supplier ID" #s="ngModel" [(ngModel)]="service.drugData.supplierId" required > 
+        </div>
+
+        <div class="col-md-6"></div> 
+
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-success btn-block mb-3">Save</button>
+            </div>
+
+            <div class="col-md-6">
+              <button type="reset" class="btn btn-danger btn-block mb-3">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>

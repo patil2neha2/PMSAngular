@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container" #table id="table">
+  <h3>SALES REPORT</h3>
+  <button class="btn btn-primary download-button" (click)="makePDF()">Download Sales Report 📥 </button>
+  <button class="btn btn-warning download-button g" routerLink="/orderdetails">Go Back ⬅️ </button>
+  <table   class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Payment Mode</th>
+        <th>Ordered date</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.name }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ order.city }}</td>
+        <td>{{ order.paymentMode }}</td>
+        <td>{{ order.orderedDate | date }}</td>
+        <td>{{ order.total }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="bg">
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card custom-card">
+      <div class="card-body">
+        <h3 class="card-title">You are at the last step!</h3>
+        <form (ngSubmit)="submitOrder()" #orderForm="ngForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required [(ngModel)]="orderData.name">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" required [(ngModel)]="orderData.address">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required [(ngModel)]="orderData.city">
+          </div>
+          <div class="form-group">
+            <label for="paymentMode">Payment Mode</label>
+            <select class="form-control" id="paymentMode" placeholder="Select Payment Mode" name="paymentMode" required [(ngModel)]="orderData.paymentMode">
+              <option value="Select Payment Mode" disabled selected >Select Payment Mode</option>
+           
+              <option value="UPI">UPI</option>
+              <option value="Debit Card">Debit Card</option>
+              <option value="Net Banking">Net Banking</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="orderedDate">Ordered Date</label>
+            <input type="date" class="form-control" id="orderedDate" name="orderedDate" required [(ngModel)]="orderData.orderedDate">
+          </div>
+          <button type="submit" class="btn btn-success">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="popup" *ngIf="showDialog">
+    <div class="popup-content">
+      <h2>THANK YOU!</h2>
+      <p>Your order has been placed successfully!</p>
+      <button class="btn btn-primary" (click)="closeDialog()">OK</button>
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+<app-header></app-header>
+<app-supplierform></app-supplierform>
+<div class="container">
+
+</div>
+<div class="container top">
+
+  <h2 class="text-center font-weight-bold">SUPPLIER DETAILS</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Supplier Name</th>
+        <th>Supplier Email</th>
+        <th>Contact Number</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of listsupplier">
+        <td>{{ s.supplierId }}</td>
+        <td>{{ s.supplierName }}</td>
+        <td>{{ s.supplierEmail }}</td>
+        <td>{{ s.contact }}</td>
+        <td>{{ s.address }}</td>
+        <td>
+          
+          <button class="btn btn-primary btn-sm b"(click)="populateSupplier(s)" >Edit</button>
+          <button class="btn btn-danger btn-sm b" (click)="delete(s.supplierId)">Delete</button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

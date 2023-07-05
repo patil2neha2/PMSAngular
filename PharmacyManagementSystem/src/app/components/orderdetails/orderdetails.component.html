@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container">
+  <h3>ORDER DETAILS</h3>
+  <button class="btn btn-warning sales-report-button" routerLink="/salesreport">Sales Report</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Payment Mode</th>
+        <th>Ordered Date</th>
+        <th>Total Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.name }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ order.city }}</td>
+        <td>{{ order.paymentMode }}</td>
+        <td>{{ order.orderedDate | date }}</td>
+        <td>{{ order.total }}</td>
+        <td>
+          <button class="btn btn-primary" [class.btn-success]="order.status === 'Approved'" (click)="approveOrder(order)">Approve✅</button>
+          <button class="btn btn-danger" (click)="deleteOrder(order)">Cancel✖️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

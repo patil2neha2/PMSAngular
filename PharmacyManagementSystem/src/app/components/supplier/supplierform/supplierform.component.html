@@ -1,0 +1,61 @@
+
+<input #checkbox1 type="checkbox" name="toggle" id="toggle">
+<label for="toggle"></label>
+<div class="container">
+</div>
+<div class="formAdd">
+    <form autocomplete="off" #myForm="ngForm" (ngSubmit)="myForm.form.valid && submit(myForm)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" name="id" [value]="service.supplierData.supplierId">
+ 
+                    <label for="name" class="float-left">Name</label>
+                    <div *ngIf="name.invalid && (name.touched || name.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="text" name="name" class="form-control" placeholder="Enter Name" #name="ngModel" [(ngModel)]="service.supplierData.supplierName" required>
+                </div>
+ 
+               
+ 
+                <div class="col-md-3">
+                    <label for="name" class="float-left">Email</label>
+                    <div *ngIf="email.invalid && (email.touched || email.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="Email" name="email" class="form-control" placeholder="Enter Email" #email="ngModel" [(ngModel)]="service.supplierData.supplierEmail" required>
+                </div>
+ 
+                <div class="col-md-3">
+                    <label for="name" class="float-left">Contact</label>
+                    <div *ngIf="contact.invalid && (contact.touched || contact.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="tel" name="contact" class="form-control" placeholder="Enter contact number" #contact="ngModel" [(ngModel)]="service.supplierData.contact" required>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="name" class="float-left">Address</label>
+                    <div *ngIf="address.invalid && (address.touched || address.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="text" name="address" class="form-control u" placeholder="Enter address" #address="ngModel" [(ngModel)]="service.supplierData.address" required>
+                </div>
+              </div>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-2">
+                        <button type="submit" routerLink="/supplier"  class="btn btn-success btn-block">Save</button>
+                    </div>
+                   
+                    <div class="col-md-2">
+                        <button type="reset" class="btn btn-danger btn-block">Cancel</button>
+                    </div>
+                </div>
+     
+     
+            </div>
+        </form>
+     </div>
+            

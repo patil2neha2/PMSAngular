@@ -1,0 +1,30 @@
+table {
+  
+    border-spacing: 0 15px;
+   
+  }
+  .top{
+    margin-top: 10px;
+  }
+  h2{
+    margin-bottom: 30px;
+  }
+  th {
+    background-color: #5a8888;
+    color: white;
+  }
+  
+  th,
+  td {
+    width: 100px;
+    text-align: center;
+    border: 1px solid black;
+  
+  }
+  
+  h2 {
+    color: #4287f5;
+  }
+  .b{
+    margin: 4px;
+  }

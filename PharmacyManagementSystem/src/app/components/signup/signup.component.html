@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="outer">
+    <div class="container ">
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center vh-100">
+                <div class="panel border text-center ">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold h ">SIGN UP</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signupForm">
+
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="name" type="text" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <small *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="text-danger">
+                                <span *ngIf="name?.errors?.['required']">Name is required.</span>
+                              </small>
+
+                              <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="email"type="email" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <small *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+                                <span *ngIf="email?.errors?.['required']">Email is required.</span>
+                                <span *ngIf="email?.errors?.['email']">Invalid email format.</span>
+                              </small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="contact"type="tel" placeholder="Your Contact Number">
+                                </div>
+                            </div>
+                            <small *ngIf="contact?.invalid && (contact?.dirty || contact?.touched)" class="text-danger">
+                                <span *ngIf="contact?.errors?.['required']">Contact Number is required.</span>
+                                <span *ngIf="contact?.errors?.['pattern']">Contact Number must be a valid 10-digit number.</span>
+                              </small>
+                            
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="password"type="password" placeholder="Your Password">
+                                </div>
+                            </div>
+                            <small *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
+                                <span *ngIf="password?.errors?.['required']">Password is required.</span>
+                                <span *ngIf="password?.errors?.['pattern']">Password must be at least 8 characters long and <br>contain at least one letter and one number.</span>
+                              </small>
+                            
+                            <button (click)="onSignup()" type="submit" class="btn btn-success btn-block mt-4 w-100">Sign Up</button>
+                            <div class="text-center pt-4 text-muted ">Already have an account? <a id="forget"
+                                    routerLink="/login">LogIn</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>    
+    </div>
+</div>

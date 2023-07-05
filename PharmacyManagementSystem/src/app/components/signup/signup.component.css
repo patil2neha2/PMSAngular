@@ -1,0 +1,84 @@
+.outer {
+    background-image: url('src/assets/images/bgimg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+    
+.panel-heading{
+  text-align: center;
+  margin-bottom: 10px;
+ }
+#forget{
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: none;
+}
+.form-inline label{
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: white;
+  }
+   .btn{
+    margin-top: 20px;
+    border-radius: 15px;
+   }
+   .panel{
+    min-height: 380px;
+    align-items: center;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    min-width: 400px;
+    
+
+    border-radius: 12px;
+    margin-top: 100px;
+   }
+  .input-field{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #434343ff;
+    background-color: transparent;
+  }
+
+  
+  .input-field.error{
+    border: 1px solid red;
+    color: red;
+  }
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+
+ input[type= 'password']{
+   border: none;
+   outline: none;
+   background: transparent;
+   width: 100%;
+ }
+form{
+    align-items: center;
+   
+}
+.h{
+    color: white;
+}
+.fa {
+    color: white;
+}                 
+
+  
